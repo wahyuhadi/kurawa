@@ -19,12 +19,15 @@ func CreateShellcode(listerner, lhost, lport, i string) {
 	cmd.Stdin = os.Stdin
 	// cmd.Stdout = os.Stdout
 	// cmd.Stderr = os.Stderr
+	fmt.Println("[+] Creating shellcode into /tmp/shellcode ... ")
 	cmd.Run()
+	fmt.Println("[+] Shellcode Created !!!")
 }
 
 func Encrypt(key []byte, text []byte) ([]byte, error) {
 
 	// Init Cipher
+	fmt.Println("[+] Encrypting shellcode  ..")
 	block, err := aes.NewCipher(key)
 	if err != nil {
 		return nil, err

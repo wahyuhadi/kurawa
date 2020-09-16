@@ -57,7 +57,7 @@ func main() {
 	}
 
 	fmt.Println("[+] Create file kurawa.js")
-	jsonFile, err := os.Create("/home/rwx/Tools/kurawa/kurawa.js")
+	jsonFile, err := os.Create("output/kurawa.js")
 	if err != nil {
 		fmt.Println("[!] Error creating JS file:", err)
 		return
